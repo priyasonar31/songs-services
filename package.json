@@ -1,22 +1,18 @@
 {
-  "name": "songs-services",
-  "version": "0.0.1",
+  "name": "express-netlify",
+  "version": "1.0.0",
   "description": "",
-  "main": "functions/server.js",
+  "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build express",
-    "start": "nodemon server-local.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "netlify",
-    "express.js"
-  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "netlify-cli": "^17.33.4",
+    "netlify-cli": "^17.23.1",
     "netlify-lambda": "^2.0.16",
-    "nodemon": "^3.1.4",
     "serverless-http": "^3.2.0"
   }
 }
