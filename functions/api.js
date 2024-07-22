@@ -7,7 +7,7 @@ import { verifyOrigin } from './middleware/verify-origin.js';
 import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(verifyOrigin);
 app.use('/.netlify/functions/api/top5', Top5Router);
