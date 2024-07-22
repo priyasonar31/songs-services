@@ -61,9 +61,7 @@ export const fetchTopSongsSingLoud = async (req, res, next) => {
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         const result = await model.generateContent([prompt]);
         const textResult = result.response.text();
-        console.log("textResult-->", textResult);
         var newStr = textResult.replace(/`|json|\n/g, "");
-        console.log("newStr-->", newStr);
         const parsedData = JSON.parse(newStr);
         const response = await getSongLinks(parsedData);
         res.json(response);
